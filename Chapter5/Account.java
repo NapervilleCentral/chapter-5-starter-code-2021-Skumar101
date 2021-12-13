@@ -13,8 +13,8 @@ public class Account implements lockable, atm ,Comparable
 
    private final double RATE = 0.035;  // interest rate of 3.5%
 
-	private boolean locked_obj = false;
-	private int password;
+    private boolean locked_obj = false;
+    private int password;
 
    private int acctNumber;
    private double balance;
@@ -41,20 +41,21 @@ public class Account implements lockable, atm ,Comparable
    */
    public double deposit (double amount)
    {
-      if(locked_obj)
+      /*
+       if(locked_obj)
       {
-		  System.out.println("access is denied--foo");
-		  return 0;
-	  }
-		  if (amount < 0)  // deposit value is negative
-		  {
-			 System.out.println ();
-			 System.out.println ("Error: Deposit amount is invalid.");
-			 System.out.println (acctNumber + "  " + fmt.format(amount));
-		  }
-		  else
-			 balance = balance + amount;
-		  return balance;
+          System.out.println("access is denied--foo");
+          return 0;
+      }
+          if (amount < 0)  // deposit value is negative
+          {
+             System.out.println ();
+             System.out.println ("Error: Deposit amount is invalid.");
+             System.out.println (acctNumber + "  " + fmt.format(amount));
+          }
+          else*/
+             balance = balance + amount;
+          return balance;
 
 
 
@@ -66,33 +67,33 @@ public class Account implements lockable, atm ,Comparable
    */
    public double withdraw (double amount, double fee)
    {
-	   if (locked_obj)
-	   {
-		   System.out.println("access denied foo");
-		   return 0;
-	   }
-			amount += fee;
+       if (locked_obj)
+       {
+           System.out.println("access denied foo");
+           return 0;
+       }
+            amount += fee;
 
-			if (amount < 0)  // withdraw value is negative
-			{
-			 System.out.println ();
-			 System.out.println ("Error: Withdraw amount is invalid.");
-			 System.out.println ("Account: " + acctNumber);
-			 System.out.println ("Requested: " + fmt.format(amount));
-			}
-			else
-			 if (amount > balance)  // withdraw value exceeds balance
-			 {
-				System.out.println ();
-				System.out.println ("Error: Insufficient funds.");
-				System.out.println ("Account: " + acctNumber);
-				System.out.println ("Requested: " + fmt.format(amount));
-				System.out.println ("Available: " + fmt.format(balance));
-			 }
-			 else
-				balance = balance - amount;
+            if (amount < 0)  // withdraw value is negative
+            {
+             System.out.println ();
+             System.out.println ("Error: Withdraw amount is invalid.");
+             System.out.println ("Account: " + acctNumber);
+             System.out.println ("Requested: " + fmt.format(amount));
+            }
+            else
+             if (amount > balance)  // withdraw value exceeds balance
+             {
+                System.out.println ();
+                System.out.println ("Error: Insufficient funds.");
+                System.out.println ("Account: " + acctNumber);
+                System.out.println ("Requested: " + fmt.format(amount));
+                System.out.println ("Available: " + fmt.format(balance));
+             }
+             else
+                balance = balance - amount;
 
-			return balance;
+            return balance;
    }
 
    /**-----------------------------------------------------------------
@@ -131,10 +132,10 @@ public class Account implements lockable, atm ,Comparable
 
    public int get_pass()
    {
-	   if (locked())
-	   	return -1;
-	   else
-	   	return password;
+       if (locked())
+        return -1;
+       else
+        return password;
 
    }
 
@@ -143,15 +144,15 @@ public class Account implements lockable, atm ,Comparable
 
    public void transfer (Account obj, double amount)
    {
-	   obj.balance -= amount;
-	   this.balance +=amount;
+       obj.balance -= amount;
+       this.balance +=amount;
 
 
    }
    public String statement ( int pass)
    {
 
-	   		return "NA";
+            return "NA";
 
 
    }
@@ -159,7 +160,7 @@ public class Account implements lockable, atm ,Comparable
    public double query (int pass)
    {
 
-	   		return -1;
+            return -1;
 
 
    }
@@ -171,34 +172,35 @@ public class Account implements lockable, atm ,Comparable
      public void setkey (int pass)
      {
 
-	 }
+     }
 
-	 public void lock ( int locker)
-	 {
-		 if (locker == password)
-		 	locked_obj = true;
+     public void lock ( int locker)
+     {
+         if (locker == password)
+            locked_obj = true;
 
-	 }
-	 public void unlock(int unlocker)
-	 {
+     }
+     public void unlock(int unlocker)
+     {
 
-	 }
+     }
 
-	public boolean locked ()
-	{
-		return true;
-	}
+    public boolean locked ()
+    {
+        return true;
+    }
 
-	//Comparable methods----------------------------
-	      /**  This is the section to implement interface Comparable
-	      // it compares the acctNumber
-	      */
-	public int compareTo (Object o)
-	{
-		return 0;
+    //Comparable methods----------------------------
+          /**  This is the section to implement interface Comparable
+          // it compares the acctNumber
+          */
+    public int compareTo (Object o)//object can equal any other object
+    {
+        return 0;
+        //return -1;
+        //return 1;
 
-
-	}//end of compareTo
+    }//end of compareTo
 }//end of class
 
 

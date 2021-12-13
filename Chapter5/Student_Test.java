@@ -9,9 +9,6 @@ public class Student_Test
 {
    public static void main (String[] args)
    {
-
-
-
     Address home = new Address("456 Elm st", "Naperville", "IL", 60565);
     Address school = new Address("540 W Auora Ave", "Naperville","IL",60540);
 
@@ -21,11 +18,11 @@ public class Student_Test
 
     System.out.println(Jill.compareTo(Taylor));
     System.out.println(Jill.compareTo(Tom));
-    System.out.println("We have "+Taylor.get_pop()+" students");
-    System.out.println("Our School's Address is "+Taylor.getSchool()+".");
-
-
-
-
+    System.out.println("We have "+Jill.get_pop()+" students");
+    System.out.println("Our School's Address is "+Jill.getSchool()+".");
+    
+    
+    
+    
 }//end of main
 }

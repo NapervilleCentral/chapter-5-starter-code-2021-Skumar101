@@ -31,7 +31,8 @@ public class Student //implements Comparable
    {
        return population;
    }
-
+   
+   
 
     public Address getSchool()
     {
@@ -51,7 +52,6 @@ public class Student //implements Comparable
 
        return result;
    }
-
 
 
 
