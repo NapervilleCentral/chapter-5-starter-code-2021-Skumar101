@@ -26,7 +26,11 @@ public class Address
 
    public int compareTo(Object obj)
    {
-	   return 0;
+       Address other = (Address) obj;
+      if(this.streetAddress.equals(other.streetAddress))
+        return 0;
+      
+      return -1;
    }
 
 
