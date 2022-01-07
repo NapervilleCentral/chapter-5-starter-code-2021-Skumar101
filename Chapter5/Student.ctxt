@@ -5,7 +5,7 @@ comment1.target=Student(java.lang.String,\ java.lang.String,\ Address)
 comment1.text=\r\n\ \ \ //\ \ Sets\ up\ this\ Student\ object\ with\ the\ specified\ initial\ values.\r\n
 comment2.params=
 comment2.target=int\ get_pop()
-comment2.text=------------------------------------------------\r\n\ returns\ the\ population\ \=\ to\ the\ amount\ of\ student\ objects\ created\r\n
+comment2.text=\r\n\ returns\ the\ population\ \=\ to\ the\ amount\ of\ student\ objects\ created\r\n
 comment3.params=
 comment3.target=Address\ getSchool()
 comment4.params=obj

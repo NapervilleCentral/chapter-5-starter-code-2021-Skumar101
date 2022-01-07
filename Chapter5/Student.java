@@ -24,7 +24,7 @@ public class Student //implements Comparable
       homeAddress = home;
 
    }
-/**------------------------------------------------
+/**
  * returns the population = to the amount of student objects created
 */
    public static int get_pop ()

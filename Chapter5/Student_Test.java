@@ -18,7 +18,7 @@ public class Student_Test
 
     System.out.println(Jill.compareTo(Taylor));
     System.out.println(Jill.compareTo(Tom));
-    System.out.println("We have "+Jill.get_pop()+" students");
+    System.out.println("We have "+Taylor.get_pop()+" students");
     System.out.println("Our School's Address is "+Jill.getSchool()+".");
     
     

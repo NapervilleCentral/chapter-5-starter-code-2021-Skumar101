@@ -4,12 +4,12 @@
 //  Represents a street address.
 //********************************************************************
 
-public class Address
+public class Address implements Comparable
 {
 
    private String streetAddress, city, state;
    private int zipCode;
-
+   
    //-----------------------------------------------------------------
    //  Sets up this Address object with the specified data.
    //-----------------------------------------------------------------
@@ -27,10 +27,18 @@ public class Address
    public int compareTo(Object obj)
    {
        Address other = (Address) obj;
-      if(this.streetAddress.equals(other.streetAddress))
+       String number = this.streetAddress.substring(0, this.streetAddress.indexOf(" "));
+       String othernum = other.streetAddress.substring(0, other.streetAddress.indexOf(" "));
+       int int1 = Integer.parseInt(number);
+       int int2 = Integer.parseInt(othernum);
+       String street1 = this.streetAddress.substring(0, this.streetAddress.indexOf(" "));
+       String street2 = other.streetAddress.substring(0, other.streetAddress.indexOf(" "));
+       if(this.streetAddress.equals(other.streetAddress))
         return 0;
-      
-      return -1;
+       if(street1.compareTo(street2)==0)
+        return int1-int2;
+       else
+        return street1.compareTo(street2);
    }
 
 
