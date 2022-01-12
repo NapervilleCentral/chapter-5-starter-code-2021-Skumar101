@@ -25,9 +25,14 @@ public class Task implements Priority, Comparable
     {
         Task obj = (Task) obje;
         if(priority>obj.priority)
-            return 1;
-        if(priority<obj.priority)
             return -1;
+        if(priority<obj.priority)
+            return 1;
         return 0;
+    }
+    public String toString()
+    {
+        String data = priority + " "+ task;
+        return data;
     }
 }
